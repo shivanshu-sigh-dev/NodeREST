@@ -1,7 +1,7 @@
-const http = require('http');
-const {URL} = require('url');
-const {StringDecoder} = require('string_decoder');
-const envDetails = require('./configure/configure');
+import http from 'http';
+import {URL} from 'url';
+import {StringDecoder} from 'string_decoder';
+import EnvDetails from './configure/configure';
 
 const server = http.createServer((req, res) => {
     // Parse the URL
@@ -69,6 +69,6 @@ const router = {
 };
 
 // Start the server to listen for the request
-server.listen(envDetails.port, () => {
-    console.log(`Server started an listenign on Port: ${envDetails.port} Environment: ${envDetails.envName}`);
+server.listen(EnvDetails.port, () => {
+    console.log(`Server started an listenign on Port: ${EnvDetails.port} Environment: ${EnvDetails.envName}`);
 });

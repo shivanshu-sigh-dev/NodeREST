@@ -11,7 +11,7 @@ const prodDetails = {
 };
 
 // Select the env on the basis of command line args
-const selectedEnvName = process.env.NODE_ENV == 'production' ? prodDetails : stagingDetails;
+const EnvDetails = process.env.NODE_ENV == 'production' ? prodDetails : stagingDetails;
 
 // Export the selected env details
-module.exports = selectedEnvName;
+export default EnvDetails;

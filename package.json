@@ -1,0 +1,19 @@
+{
+  "name": "noderest",
+  "version": "1.0.0",
+  "description": "This app is to demonstrate how to use Node.js OOTB packages to create a RESTful API. None of external API's have been used to develop this app.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist",
+    "prod": "npm run build && env NODE_ENV=production node dist/app.js",
+    "stage": "npm run build && node dist/app.js"
+  },
+  "author": "Shivanshu Singh",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2"
+  }
+}
